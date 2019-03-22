@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import logo from '../images/dg1234uk.png';
+import aboutPic from '../images/image-2.jpg';
 
-const IndexPage = () => (
+const about = () => (
   <div className="index-container">
     <header className="header">
       <Link to="/">
@@ -20,12 +21,12 @@ const IndexPage = () => (
       <nav className="nav">
         <ul className="nav__ul">
           <li className="nav__li">
-            <Link to="/" className="nav__link nav__link--active">
+            <Link to="/" className="nav__link">
               Articles
             </Link>
           </li>
-          <li className="nav__li">
-            <Link to="about" className="nav__link">
+          <li className="nav__li nav__link-active">
+            <Link to="about" className="nav__link nav__link--active">
               About me
             </Link>
           </li>
@@ -91,25 +92,34 @@ const IndexPage = () => (
     </header>
     <main className="post-list">
       <article className="post">
-        <header className="post__info">
-          <time className="post__date">August 2017</time>
-          <Link className="post__tags post__link">Typography</Link>
-        </header>
-        <h2 className="post__title">
-          <Link className="post__link">
-            Humane Typography in the Digital Age
-          </Link>
-        </h2>
-        <p className="post__excerpt">
-          An Essay on Typography by Eric Gill takes the reader back to the year
-          1930. The year when a conflict between two worlds came to its term.
-          The machines of the industrial world finally took over the
-          handicrafts.
+        <h1>About me</h1>
+        <p>
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+          ultricies eget, tempor sit amet, ante.
         </p>
-        <Link className="post__link">Read</Link>
+        <p>
+          <img src={aboutPic} alt="A really great pic" />
+        </p>
+        <p>
+          <em>
+            Donec eu libero sit amet quam egestas semper. Aenean ultricies mi
+            vitae est. Mauris placerat eleifend leo. Quisque sit amet est et
+            sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed,
+            commodo vitae, ornare sit amet, wisi.
+          </em>
+        </p>
+        <p>
+          Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum
+          orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis
+          pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus
+          faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat.
+          Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor,
+          facilisis luctus, metus
+        </p>
       </article>
     </main>
   </div>
 );
 
-export default IndexPage;
+export default about;
