@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import { Link, graphql } from 'gatsby';
 import logo from '../images/dg1234uk.png';
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <div className="index-container">
     <header className="header">
       <Link to="/">
@@ -90,26 +91,71 @@ const IndexPage = () => (
       </div>
     </header>
     <main className="post-list">
-      <article className="post">
-        <header className="post__info">
-          <time className="post__date">August 2017</time>
-          <Link className="post__tags post__link">Typography</Link>
-        </header>
-        <h2 className="post__title">
-          <Link className="post__link">
-            Humane Typography in the Digital Age
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <article className="post" key={node.frontmatter.slug}>
+          <header className="post__info">
+            <time className="post__date">{node.frontmatter.date}</time>
+            <Link
+              to={`/category/${node.frontmatter.category.toLowerCase()}`}
+              className="post__tags post__link"
+            >
+              {node.frontmatter.category}
+            </Link>
+          </header>
+          <h2 className="post__title">
+            <Link to={node.frontmatter.slug} className="post__link">
+              {node.frontmatter.title}
+            </Link>
+          </h2>
+          <p className="post__excerpt">{node.excerpt}</p>
+          <Link to={node.frontmatter.slug} className="post__link">
+            Read
           </Link>
-        </h2>
-        <p className="post__excerpt">
-          An Essay on Typography by Eric Gill takes the reader back to the year
-          1930. The year when a conflict between two worlds came to its term.
-          The machines of the industrial world finally took over the
-          handicrafts.
-        </p>
-        <Link className="post__link">Read</Link>
-      </article>
+        </article>
+      ))}
     </main>
+    <pre>{data.allMarkdownRemark.totalCount}</pre>
   </div>
 );
+
+IndexPage.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      totalCount: PropTypes.number.isRequired,
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            frontmatter: PropTypes.shape({
+              title: PropTypes.string.isRequired,
+              slug: PropTypes.string.isRequired,
+              category: PropTypes.string.isRequired,
+              date: PropTypes.string.isRequired,
+            }).isRequired,
+            excerpt: PropTypes.string.isRequired,
+          }).isRequired,
+        })
+      ).isRequired,
+    }).isRequired,
+  }).isRequired,
+};
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
+      edges {
+        node {
+          frontmatter {
+            title
+            slug
+            category
+            date(formatString: "DD MMMM, YYYY")
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;
