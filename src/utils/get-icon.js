@@ -25,6 +25,12 @@ const getIcon = name => {
     case 'codepen':
       icon = ICONS.CODEPEN;
       break;
+    case 'creativecommons':
+      icon = ICONS.CREATIVECOMMONS;
+      break;
+    case 'creativecommonsby':
+      icon = ICONS.CREATIVECOMMONSBY;
+      break;
     default:
       icon = {};
       break;

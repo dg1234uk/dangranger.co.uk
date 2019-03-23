@@ -26,7 +26,6 @@ Sidebar.propTypes = {
       siteMetadata: PropTypes.shape({
         title: PropTypes.string.isRequired,
         subtitle: PropTypes.string.isRequired,
-        copyright: PropTypes.string.isRequired,
         menu: PropTypes.arrayOf(
           PropTypes.shape({
             label: PropTypes.string.isRequired,
@@ -54,7 +53,6 @@ const SidebarQuery = props => (
           siteMetadata {
             title
             subtitle
-            copyright
             menu {
               label
               path

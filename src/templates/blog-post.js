@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
+import Copyright from '../components/Copyright';
 
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark;
   return (
     <div className="blog-container">
-      <a href="/" className="all-articles-link">
+      <a href="/" className="link-button all-articles-link">
         All Articles
       </a>
       <main className="blog-post">
@@ -15,7 +16,9 @@ const BlogPost = ({ data }) => {
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
           <footer className="blog-post-footer">
             <p>
-              <em>Published {post.frontmatter.date}</em>
+              <em>
+                By {post.frontmatter.author}. Published {post.frontmatter.date}.
+              </em>
             </p>
             <div className="blog-post-tags">
               <ul className="blog-post-tags__ul">
@@ -23,7 +26,7 @@ const BlogPost = ({ data }) => {
                   <li className="blog-post-tags__li">
                     <Link
                       to={`/tags/${tag.toLowerCase()}/`}
-                      className="blog-post-tags__link"
+                      className="link-button"
                     >
                       {tag}
                     </Link>
@@ -32,12 +35,9 @@ const BlogPost = ({ data }) => {
               </ul>
             </div>
             <div className="blog-post-footer__foot">
-              <p>
-                Pellentesque odio nisi, euismod in, pharetra a, ultricies in,
-                diam. Sed arcu.
-              </p>
-              <p>SOCIAL LINKS</p>
+              <p>{data.site.siteMetadata.subtitle}</p>
             </div>
+            <Copyright />
           </footer>
         </article>
       </main>
@@ -51,8 +51,14 @@ export const query = graphql`
       html
       frontmatter {
         title
-        date
+        author
+        date(formatString: "DD MMMM YYYY")
         tags
+      }
+    }
+    site {
+      siteMetadata {
+        subtitle
       }
     }
   }
@@ -64,8 +70,14 @@ BlogPost.propTypes = {
       html: PropTypes.string.isRequired,
       frontmatter: PropTypes.shape({
         title: PropTypes.string.isRequired,
+        author: PropTypes.string.isRequired,
         date: PropTypes.object.isRequired,
         tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+      }).isRequired,
+    }).isRequired,
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        subtitle: PropTypes.string.isRequired,
       }).isRequired,
     }).isRequired,
   }).isRequired,

@@ -1,14 +1,28 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import getIcon from '../utils/get-icon';
 
-const Copyright = ({ text }) => (
+const Copyright = () => (
   <div className="copyright">
-    <span>{text}</span>
+    <a
+      href="https://creativecommons.org/licenses/by/4.0/"
+      style={{ color: '#b6b6b6', textDecoration: 'none' }}
+    >
+      <svg
+        className="social__svg no-link-color"
+        viewBox={getIcon('creativecommons').viewBox}
+      >
+        <path d={getIcon('creativecommons').path} />
+      </svg>
+      &nbsp;
+      <svg
+        className="social__svg"
+        viewBox={getIcon('creativecommonsby').viewBox}
+      >
+        <path d={getIcon('creativecommonsby').path} />
+      </svg>
+      <span> Creative Commons (CC BY 4.0).</span>
+    </a>
   </div>
 );
-
-Copyright.propTypes = {
-  text: PropTypes.string.isRequired,
-};
 
 export default Copyright;
