@@ -6,8 +6,8 @@ import getIcon from '../utils/get-icon';
 
 import PageLayout from '../components/Layouts/page-layout';
 
-const ContactMe = ({ data, location }) => (
-  <PageLayout location={location}>
+const ContactMe = ({ data }) => (
+  <PageLayout>
     <main className="post-list">
       <article className="post">
         <h1>Contact me</h1>
@@ -39,7 +39,6 @@ const ContactMe = ({ data, location }) => (
 );
 
 ContactMe.propTypes = {
-  location: PropTypes.object.isRequired,
   data: PropTypes.shape({
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({

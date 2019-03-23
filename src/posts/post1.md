@@ -3,7 +3,7 @@ title: "Your Great Blog Post"
 date: 2019-03-22
 author: Dan Granger
 slug: "/posts/post1/"
-category: "Test"
+category: "JavaScript"
 tags:
   - test-post
   - JavaScript

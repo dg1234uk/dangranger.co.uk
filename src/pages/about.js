@@ -1,10 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
 import PageLayout from '../components/Layouts/page-layout';
 
-const About = ({ location }) => (
-  <PageLayout location={location}>
+const About = () => (
+  <PageLayout>
     <main className="post-list">
       <article className="post">
         <h1>About me</h1>
@@ -13,9 +11,5 @@ const About = ({ location }) => (
     </main>
   </PageLayout>
 );
-
-About.propTypes = {
-  location: PropTypes.object.isRequired,
-};
 
 export default About;

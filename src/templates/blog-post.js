@@ -24,10 +24,7 @@ const BlogPost = ({ data }) => {
               <ul className="blog-post-tags__ul">
                 {post.frontmatter.tags.map(tag => (
                   <li className="blog-post-tags__li">
-                    <Link
-                      to={`/tags/${tag.toLowerCase()}/`}
-                      className="link-button"
-                    >
+                    <Link to={`/tags/${tag}/`} className="link-button">
                       {tag}
                     </Link>
                   </li>

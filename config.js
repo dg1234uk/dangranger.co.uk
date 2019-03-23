@@ -20,6 +20,10 @@ module.exports = {
       label: 'Contact me',
       path: 'contact',
     },
+    {
+      label: 'Tags',
+      path: 'tags',
+    },
   ],
   author: {
     name: 'Dan Granger',

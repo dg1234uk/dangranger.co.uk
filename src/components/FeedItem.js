@@ -7,7 +7,7 @@ const FeedItem = ({ node }) => (
     <header className="post__info">
       <time className="post__date">{node.frontmatter.date}</time>
       <Link
-        to={`/category/${node.frontmatter.category.toLowerCase()}`}
+        to={`/tags/${node.frontmatter.category}`}
         className="post__tags post__link"
       >
         {node.frontmatter.category}
