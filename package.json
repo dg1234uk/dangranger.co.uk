@@ -18,12 +18,12 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "gatsby": "^2.2.7",
-    "gatsby-source-filesystem": "^2.0.27",
+    "gatsby": "^2.2.8",
+    "gatsby-source-filesystem": "^2.0.28",
     "gatsby-transformer-remark": "^2.3.8",
     "prop-types": "^15.7.2",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
@@ -35,7 +35,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
-    "eslint-plugin-react-hooks": "^1.5.1",
+    "eslint-plugin-react-hooks": "^1.6.0",
     "prettier": "^1.16.4"
   }
 }
