@@ -1,8 +1,14 @@
+const siteConfig = require('./config.js');
+
 module.exports = {
   siteMetadata: {
-    title: `Dan Granger | Blog`,
-    description: `A JavaScript blog`,
-    author: `@dg1234uk`,
+    url: siteConfig.url,
+    title: siteConfig.title,
+    subtitle: siteConfig.subtitle,
+    description: siteConfig.description,
+    author: siteConfig.author,
+    menu: siteConfig.menu,
+    copyright: siteConfig.copyright,
   },
   plugins: [
     {
