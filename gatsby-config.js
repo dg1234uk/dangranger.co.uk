@@ -20,6 +20,8 @@ module.exports = {
     copyright: siteConfig.copyright,
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -34,7 +36,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -44,6 +45,7 @@ module.exports = {
             options: {
               maxWidth: 640,
               backgroundColor: `white`,
+              withWebp: true,
             },
           },
           {

@@ -19,7 +19,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "gatsby": "^2.2.8",
+    "gatsby": "^2.2.9",
+    "gatsby-image": "^2.0.34",
     "gatsby-plugin-feed": "^2.1.0",
     "gatsby-plugin-gtag": "^1.0.10",
     "gatsby-plugin-react-helmet": "^3.0.10",
@@ -33,6 +34,7 @@
     "gatsby-remark-smartypants": "^2.0.9",
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-transformer-remark": "^2.3.8",
+    "gatsby-transformer-sharp": "^2.1.17",
     "prismjs": "^1.15.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.5",
