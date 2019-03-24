@@ -19,7 +19,7 @@ If I was to type a new blog post it would go something a bit like this. How do y
 
 ### Anyway
 
-Here's some code... hopefully I can highlight `js›.some-class { background-color: red }` with CSS syntax.
+Here's some code... hopefully I can highlight `css›.some-class { background-color: red }` with CSS syntax.
 
 ```js{numberLines: true}
 console.log("Hello World");

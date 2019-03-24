@@ -6,8 +6,9 @@
   "author": "Daniel Granger",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
+    "develop": "gatsby develop -S",
+    "develop:insecure": "gatsby develop",
+    "start": "npm run develop -S",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
@@ -29,6 +30,7 @@
     "gatsby-remark-embed-snippet": "^3.2.4",
     "gatsby-remark-images": "^3.0.10",
     "gatsby-remark-prismjs": "^3.2.6",
+    "gatsby-remark-smartypants": "^2.0.9",
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-transformer-remark": "^2.3.8",
     "prismjs": "^1.15.0",
