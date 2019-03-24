@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
+import SEO from '../components/Seo';
 import Copyright from '../components/Copyright';
 
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark;
   return (
     <div className="blog-container">
+      <SEO title={post.frontmatter.title} keywords={post.frontmatter.tags} />
       <a href="/" className="link-button all-articles-link">
         All Articles
       </a>

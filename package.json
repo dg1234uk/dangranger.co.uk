@@ -19,7 +19,10 @@
   "license": "MIT",
   "dependencies": {
     "gatsby": "^2.2.8",
+    "gatsby-plugin-react-helmet": "^3.0.10",
+    "gatsby-plugin-robots-txt": "^1.4.0",
     "gatsby-plugin-sharp": "^2.0.30",
+    "gatsby-plugin-sitemap": "^2.0.10",
     "gatsby-remark-embed-snippet": "^3.2.4",
     "gatsby-remark-images": "^3.0.10",
     "gatsby-remark-prismjs": "^3.2.6",
@@ -28,7 +31,8 @@
     "prismjs": "^1.15.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.5",
-    "react-dom": "^16.8.5"
+    "react-dom": "^16.8.5",
+    "react-helmet": "^5.2.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

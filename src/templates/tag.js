@@ -1,21 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
+import SEO from '../components/Seo';
 import PageLayout from '../components/Layouts/page-layout';
 import FeedItem from '../components/FeedItem';
 
 const Tags = ({ data, pageContext }) => (
   <PageLayout>
+    <SEO
+      title={`${pageContext.tagName} Tag`}
+      keywords={[`${pageContext.tagName} Tag`, `blog`, `tags`]}
+    />
     <main className="post-list">
       <h1>{pageContext.tagName} Tag</h1>
 
       {data.allMarkdownRemark.edges.map(edge => (
         <FeedItem node={edge.node} key={edge.node.frontmatter.slug} />
-        // <Link to={edge.node.frontmatter.slug}>
-        //   <li key={edge.node.frontmatter.slug}>
-        //     {edge.node.frontmatter.title}
-        //   </li>
-        // </Link>
       ))}
     </main>
   </PageLayout>

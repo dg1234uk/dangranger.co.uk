@@ -1,12 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-
+import SEO from '../components/Seo';
 import PageLayout from '../components/Layouts/page-layout';
 import Feed from '../components/Feed';
 
 const IndexPage = ({ data }) => (
   <PageLayout>
+    <SEO
+      title="Blog"
+      keywords={[
+        `Dan`,
+        `Daniel`,
+        `Granger`,
+        `Blog`,
+        `JavaScript`,
+        `Full-stack`,
+      ]}
+    />
     <Feed posts={data.allMarkdownRemark.edges} />
   </PageLayout>
 );

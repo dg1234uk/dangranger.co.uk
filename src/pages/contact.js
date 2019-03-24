@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import SEO from '../components/Seo';
 import Icon from '../components/Icon';
 import getIcon from '../utils/get-icon';
-
 import PageLayout from '../components/Layouts/page-layout';
 
 const ContactMe = ({ data }) => (
   <PageLayout>
+    <SEO title="Contact me" />
     <main className="post-list">
       <article className="post">
         <h1>Contact me</h1>

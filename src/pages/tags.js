@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
+import SEO from '../components/Seo';
 import PageLayout from '../components/Layouts/page-layout';
 
 const Tags = ({ data }) => (
   <PageLayout>
+    <SEO title="Tags" keywords={[`Dan Granger`, `blog`, `tags`]} />
     <main className="post-list">
       <article className="post">
         <h1>Tags</h1>
