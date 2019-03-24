@@ -137,5 +137,15 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        // your google analytics tracking id
+        trackingId: `UA-136833407-1`,
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+      },
+    },
   ],
 };
