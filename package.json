@@ -19,6 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "gatsby": "^2.2.8",
+    "gatsby-plugin-feed": "^2.1.0",
     "gatsby-plugin-react-helmet": "^3.0.10",
     "gatsby-plugin-robots-txt": "^1.4.0",
     "gatsby-plugin-sharp": "^2.0.30",

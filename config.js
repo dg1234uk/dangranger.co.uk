@@ -35,7 +35,7 @@ module.exports = {
       // discord: '#',
       twitter: 'https://twitter.com/dg1234uk',
       github: 'https://github.com/dg1234uk',
-      rss: 'https://dangranger.co.uk/rss',
+      rss: '/rss.xml',
       codepen: 'https://codepen.io/dg1234uk/',
     },
   },
