@@ -245,7 +245,7 @@ figcaption {
 }
 
 .social {
-  margin-bottom: 1.625rem;
+  margin-bottom: 1.5rem;
 }
 
 .social__ul {
@@ -254,9 +254,9 @@ figcaption {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 25%;
-  justify-content: space-evenly;
+  justify-content: left;
   list-style-type: none;
-  width: 8.75rem;
+  /* width: 8.75rem; */
   padding: 0;
   margin: 0 -0.375rem;
 }
