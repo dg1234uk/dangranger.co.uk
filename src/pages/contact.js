@@ -13,7 +13,6 @@ const ContactMe = ({ data }) => (
       <article className="post">
         <h1>Contact me</h1>
         <p>If you would like to get in contact with me please do so via:</p>
-        {console.log(data)}
         <ul>
           <li>
             <Icon icon={getIcon('twitter')} />{' '}

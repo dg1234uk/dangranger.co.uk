@@ -14,15 +14,15 @@ module.exports = {
     },
     {
       label: 'About me',
-      path: 'about',
+      path: '/about',
     },
     {
       label: 'Contact me',
-      path: 'contact',
+      path: '/contact',
     },
     {
       label: 'Tags',
-      path: 'tags',
+      path: '/tags',
     },
   ],
   author: {

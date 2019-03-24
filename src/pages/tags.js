@@ -13,7 +13,7 @@ const Tags = ({ data }) => (
         <ul>
           {data.allMarkdownRemark.group.map(tag => (
             <li key={tag.fieldValue}>
-              <Link to={`tags/${tag.fieldValue}`}>
+              <Link to={`/tags/${tag.fieldValue}`}>
                 {tag.fieldValue} ({tag.totalCount})
               </Link>
             </li>

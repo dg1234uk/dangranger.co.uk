@@ -25,7 +25,7 @@ const BlogPost = ({ data }) => {
             <div className="blog-post-tags">
               <ul className="blog-post-tags__ul">
                 {post.frontmatter.tags.map(tag => (
-                  <li className="blog-post-tags__li">
+                  <li className="blog-post-tags__li" key={tag}>
                     <Link to={`/tags/${tag}/`} className="link-button">
                       {tag}
                     </Link>
@@ -70,7 +70,7 @@ BlogPost.propTypes = {
       frontmatter: PropTypes.shape({
         title: PropTypes.string.isRequired,
         author: PropTypes.string.isRequired,
-        date: PropTypes.object.isRequired,
+        date: PropTypes.string.isRequired,
         tags: PropTypes.arrayOf(PropTypes.string).isRequired,
       }).isRequired,
     }).isRequired,

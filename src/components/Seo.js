@@ -28,8 +28,8 @@ function SEO({ description, lang, meta, keywords, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      defaultTitle="Blog| Dan Granger"
+      titleTemplate={`%s - ${site.siteMetadata.title}`}
+      defaultTitle="Blog - Dan Granger"
       meta={[
         {
           name: `description`,
