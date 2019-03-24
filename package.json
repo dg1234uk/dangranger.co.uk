@@ -25,6 +25,7 @@
     "gatsby-plugin-robots-txt": "^1.4.0",
     "gatsby-plugin-sharp": "^2.0.30",
     "gatsby-plugin-sitemap": "^2.0.10",
+    "gatsby-remark-autolink-headers": "^2.0.16",
     "gatsby-remark-embed-snippet": "^3.2.4",
     "gatsby-remark-images": "^3.0.10",
     "gatsby-remark-prismjs": "^3.2.6",
