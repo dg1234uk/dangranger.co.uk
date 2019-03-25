@@ -19,6 +19,8 @@ const IndexPage = ({ data }) => (
       ]}
     />
     <Feed posts={data.allMarkdownRemark.edges} />
+    {/* eslint-disable-next-line */}
+    <a href="javascript:gaOptout();">Deactive Google Tracking</a>
   </PageLayout>
 );
 
