@@ -165,5 +165,22 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Dan Granger | Blog`,
+        short_name: `Dan Granger | Blog`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#ffffff`,
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: `standalone`,
+        icon: `src/images/dgLogo.png`, // This path is relative to the root of the site.
+        include_favicon: true, // Include favicon
+      },
+    },
+    `gatsby-plugin-offline`, // Must be loaded after gatsby-plugin-manifest
+    // CAUTION: If you remove gatsby-plugin-offline, replace it with gatsby-plugin-remove-serviceworker.
   ],
 };
