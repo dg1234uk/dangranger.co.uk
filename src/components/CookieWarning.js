@@ -1,78 +1,110 @@
 /* global gaOptout */
-import React, { Fragment } from 'react';
+import React from 'react';
 import getCookie from '../utils/getCookie';
 
-const CookieWarning = () => {
-  // console.log(getCookie('dg1234uk'));
-
-  const cookie = getCookie('acceptCookies');
-
-  let requestPermission = true;
-  if (cookie === 'true' || cookie === 'false') {
-    requestPermission = false;
+class CookieWarning extends React.Component {
+  constructor(props) {
+    super(props);
+    const cookie = getCookie('acceptCookies');
+    if (cookie === 'true' || cookie === 'false') {
+      this.state = { requestPermission: false };
+    } else {
+      this.state = { requestPermission: true };
+    }
   }
 
-  function acceptCookies(e) {
-    e.preventDefault();
-    document.cookie = 'acceptCookies=true';
-    requestPermission = false;
-  }
+  setCookie = cookie => {
+    // Build the expiration date string:
+    const expirationDate = new Date();
+    let cookieString = '';
+    expirationDate.setFullYear(expirationDate.getFullYear() + 1);
+    // Build the set-cookie string:
+    cookieString = `${cookie}; path=/; expires= + ${expirationDate.toUTCString()}`;
+    // Create or update the cookie:
+    document.cookie = cookieString;
+  };
 
-  function declineCookies(e) {
-    e.preventDefault();
-    document.cookie = 'acceptCookies=false';
+  acceptCookies = event => {
+    event.preventDefault();
+    this.setCookie('acceptCookies=true');
+    this.setState({
+      requestPermission: false,
+    });
+  };
+
+  declineCookies = event => {
+    event.preventDefault();
+    this.setCookie('acceptCookies=false');
     gaOptout();
-    requestPermission = false;
-  }
-
-  const divStyle = {
-    position: 'fixed',
-    width: '100%',
-    left: '0',
-    bottom: '0',
-    padding: '5px',
-    background: '#EEE',
-    borderTop: '1px solid #888',
+    this.setState({
+      requestPermission: false,
+    });
   };
 
-  const buttonDivStyle = {
-    width: '100px',
-    display: 'flex',
-  };
+  render() {
+    const { requestPermission } = this.state;
 
-  const buttonStyle = {
-    margin: '5px',
-  };
+    const divStyle = {
+      position: 'fixed',
+      width: '100%',
+      left: '0',
+      bottom: '0',
+      padding: '0 1.25rem',
+      background: '#FFDE59',
+      // borderTop: '1px solid #888',
+      boxShadow: '2px 0 3px 1px rgba(0, 0, 0, 0.2)',
+    };
 
-  const CookieRequest = () => (
-    <div style={divStyle} className="cookie-warn">
-      <span>
-        I use Google Analytics on this site to help me see how people use my
-        site. To help remember you it sets cookies.{' '}
-      </span>
+    const buttonDivStyle = {
+      width: '100px',
+      display: 'flex',
+    };
 
-      <div style={buttonDivStyle}>
-        <a
-          href="#"
-          onClick={acceptCookies}
-          style={buttonStyle}
-          className="link-button"
-        >
-          Accept Cookies
-        </a>
-        <a
-          href="#"
-          onClick={declineCookies}
-          style={buttonStyle}
-          className="link-button"
-        >
-          Decline Cookies
-        </a>
+    const buttonStyle = {
+      cursor: 'pointer',
+      margin: '5px',
+      background: '#fff',
+      fontSize: '1rem',
+    };
+
+    const CookieRequest = () => (
+      <div style={divStyle} className="cookie-warn">
+        <span>
+          I use{' '}
+          <a
+            href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Analytics
+          </a>{' '}
+          on this site which uses cookies. It helps me see how people, like
+          yourself, use my site. If you decline, Google Analytics will be
+          disabled.
+        </span>
+
+        <div style={buttonDivStyle}>
+          <button
+            type="button"
+            onClick={this.acceptCookies}
+            style={buttonStyle}
+            className="link-button"
+          >
+            Accept
+          </button>
+          <button
+            type="button"
+            onClick={this.declineCookies}
+            style={buttonStyle}
+            className="link-button"
+          >
+            Decline
+          </button>
+        </div>
       </div>
-    </div>
-  );
-
-  return requestPermission ? <CookieRequest /> : null;
-};
+    );
+    return requestPermission ? <CookieRequest /> : null;
+  }
+}
 
 export default CookieWarning;

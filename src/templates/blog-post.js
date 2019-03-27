@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import SEO from '../components/Seo';
 import Copyright from '../components/Copyright';
+import CookieWarning from '../components/CookieWarning';
 
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark;
@@ -40,6 +41,7 @@ const BlogPost = ({ data }) => {
           </footer>
         </article>
       </main>
+      <CookieWarning />
     </div>
   );
 };
