@@ -4,6 +4,7 @@ import FeedItem from './FeedItem';
 
 const Feed = ({ posts }) => (
   <main className="post-list">
+    {posts.length <= 0 && <h2>There are currently no posts 😭.</h2>}
     {posts.map(({ node }) => (
       <FeedItem node={node} key={node.frontmatter.slug} />
     ))}

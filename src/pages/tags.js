@@ -10,6 +10,9 @@ const Tags = ({ data }) => (
     <main className="post-list">
       <article className="post">
         <h1>Tags</h1>
+        {data.allMarkdownRemark.group <= 0 && (
+          <h2>There are currently no tags 😭.</h2>
+        )}
         <ul>
           {data.allMarkdownRemark.group.map(tag => (
             <li key={tag.fieldValue}>

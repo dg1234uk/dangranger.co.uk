@@ -3,7 +3,8 @@
 :root {
   --text-color: #222;
   --text-sub-color: #888;
-  --link-color: #5d93ff;
+  /* --link-color: #5d93ff; */
+  --link-color: #2968ff;
   --link-active-color: #f7a046;
   --text-tag-color: #f7a046;
 }

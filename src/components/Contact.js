@@ -5,7 +5,7 @@ import getIcon from '../utils/get-icon';
 
 const Contact = ({ socialName, link }) => (
   <li className="social__li">
-    <a href={link} className="social__link">
+    <a href={link} aria-label={socialName} className="social__link">
       <Icon icon={getIcon(socialName)} />
     </a>
   </li>
