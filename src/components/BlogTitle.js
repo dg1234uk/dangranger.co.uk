@@ -42,7 +42,7 @@ const BlogTitleQuery = props => (
         file(relativePath: { eq: "dg1234uk.png" }) {
           childImageSharp {
             fixed(width: 75) {
-              ...GatsbyImageSharpFixed_withWebp
+              ...GatsbyImageSharpFixed_withWebp_noBase64
             }
           }
         }
