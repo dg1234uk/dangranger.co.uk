@@ -6,6 +6,10 @@ import Copyright from '../components/Copyright';
 import CookieWarning from '../components/CookieWarning';
 import Styles from './blog-post.module.css';
 
+import '../styles/prism-okaidia.css';
+// import '../styles/dracula-prism.css';
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
+
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark;
   return (

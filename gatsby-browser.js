@@ -7,7 +7,3 @@
 // You can delete this file if you're not using it
 
 import './src/styles/style.css';
-import './src/styles/prism-okaidia.css';
-// import './src/styles/dracula-prism.css';
-
-import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
