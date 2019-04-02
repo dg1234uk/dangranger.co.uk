@@ -1,0 +1,20 @@
+.indexContainer {
+  display: block;
+  max-width: 66.875rem;
+  margin: 0 auto;
+  /* height: 100vh; */
+}
+
+@media only screen and (min-width: 685px) {
+  .indexContainer {
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-template-areas: "sidebar  content";
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .indexContainer {
+    grid-template-columns: 31.4299065% auto;
+  }
+}

@@ -1,0 +1,5 @@
+.social__svg {
+  width: 1em; /* TODO: Should these rem? */
+  height: 1em; /* TODO: Should these rem? */
+  fill: currentColor;
+}

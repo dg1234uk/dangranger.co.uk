@@ -1,0 +1,18 @@
+.postList {
+  padding: 1.5625rem 1.25rem;
+  margin-bottom: 3.25rem;
+  /* overflow-y: scroll; */
+}
+
+@media only screen and (min-width: 685px) {
+  .postList {
+    grid-area: content;
+    padding: 2.1rem 1.5rem 2.1rem 2.9rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .postList {
+    padding: 2.8rem 2rem 2.8rem 3.8rem;
+  }
+}

@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
+import Styles from './Nav.module.css';
 
 const Nav = ({ menu }) => (
   <div>
-    <nav className="nav">
-      <ul className="nav__ul">
+    <nav className={Styles.nav}>
+      <ul className={Styles.nav__ul}>
         {menu.map(menuItem => (
-          <li className="nav__li" key={menuItem.path}>
+          <li className={Styles.nav__li} key={menuItem.path}>
             <Link
               to={menuItem.path}
-              className="nav__link"
-              activeClassName="nav__link--active"
+              className={Styles.nav__link}
+              activeClassName={Styles.nav__linkActive}
             >
               {menuItem.label}
             </Link>

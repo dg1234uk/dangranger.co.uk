@@ -4,37 +4,38 @@ import { Link, graphql } from 'gatsby';
 import SEO from '../components/Seo';
 import Copyright from '../components/Copyright';
 import CookieWarning from '../components/CookieWarning';
+import Styles from './blog-post.module.css';
 
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark;
   return (
-    <div className="blog-container">
+    <div className={Styles.blogContainer}>
       <SEO title={post.frontmatter.title} keywords={post.frontmatter.tags} />
-      <a href="/" className="link-button all-articles-link">
+      <a href="/" className={Styles.allArticlesLink}>
         All Articles
       </a>
-      <main className="blog-post">
-        <h1 className="blog-post__title">{post.frontmatter.title}</h1>
-        <article className="blog-body">
+      <main className={Styles.blogPost}>
+        <h1 className={Styles.blogPost__title}>{post.frontmatter.title}</h1>
+        <article>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          <footer className="blog-post-footer">
+          <footer className={Styles.blogPostFooter}>
             <p>
               <em>
                 By {post.frontmatter.author}. Published {post.frontmatter.date}.
               </em>
             </p>
-            <div className="blog-post-tags">
-              <ul className="blog-post-tags__ul">
+            <div>
+              <ul className={Styles.blogPostTags__ul}>
                 {post.frontmatter.tags.map(tag => (
-                  <li className="blog-post-tags__li" key={tag}>
-                    <Link to={`/tags/${tag}/`} className="link-button">
+                  <li className={Styles.blogPostTags__li} key={tag}>
+                    <Link to={`/tags/${tag}/`} className={Styles.linkButton}>
                       {tag}
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="blog-post-footer__foot">
+            <div className={Styles.blogPostFooter__foot}>
               <p>{data.site.siteMetadata.subtitle}</p>
             </div>
             <Copyright />

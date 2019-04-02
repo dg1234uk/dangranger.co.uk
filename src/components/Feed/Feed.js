@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FeedItem from './FeedItem';
+import Styles from './Feed.module.css';
 
 const Feed = ({ posts }) => (
-  <main className="post-list">
+  <main className={Styles.postList}>
     {posts.length <= 0 && <h2>There are currently no posts 😭.</h2>}
     {posts.map(({ node }) => (
       <FeedItem node={node} key={node.frontmatter.slug} />

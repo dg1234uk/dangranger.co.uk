@@ -1,0 +1,33 @@
+.nav {
+  margin-bottom: 1.625rem;
+}
+
+.nav__ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__li {
+  margin: 0.625rem 0;
+  padding: 0;
+}
+
+.nav__link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.nav__link:active,
+.nav__link:focus,
+.nav__link:hover {
+  color: var(--link-color);
+  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+}
+
+.nav__linkActive {
+  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+  text-decoration-color: var(--text-color);
+}

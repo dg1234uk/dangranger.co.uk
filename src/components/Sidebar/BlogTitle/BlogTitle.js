@@ -2,24 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
-// import logo from '../images/dg1234uk.png';
+import Styles from './BlogTitle.module.css';
 
 const BlogTitle = ({ data, title, subtitle }) => (
   <div>
     <Link to="/">
-      {/* <img src={logo} alt="Logo" className="header__logo" /> */}
       <Img
         fixed={data.file.childImageSharp.fixed}
         alt="Logo"
-        className="header__logo"
+        className={Styles.header__logo}
       />
     </Link>
-    <h1 className="header__title">
-      <Link to="/" className="header__link">
+    <h1 className={Styles.header__title}>
+      <Link to="/" className={Styles.header__link}>
         {title}
       </Link>
     </h1>
-    <p className="header__intro">{subtitle}</p>
+    <p className={Styles.header__intro}>{subtitle}</p>
   </div>
 );
 

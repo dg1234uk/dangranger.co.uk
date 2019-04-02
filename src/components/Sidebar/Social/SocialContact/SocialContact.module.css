@@ -1,0 +1,22 @@
+.social__li {
+  padding: 0;
+  margin: 0.25rem;
+  border-radius: 50%;
+  border: 1px solid #ebebeb;
+  height: 2.3125rem;
+  width: 2.3125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social__link {
+  line-height: 0;
+  color: #222;
+}
+
+.social__link:active,
+.social__link:focus,
+.social__link:hover {
+  color: var(--link-color);
+}

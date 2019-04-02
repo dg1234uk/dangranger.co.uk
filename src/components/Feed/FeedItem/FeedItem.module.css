@@ -1,0 +1,43 @@
+.post {
+  margin-bottom: 2.03125rem;
+}
+
+.post__info {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.post__link {
+  text-decoration: none;
+}
+
+.post__tags {
+  composes: post__link;
+  margin-left: 0.4375rem;
+  color: var(--text-tag-color);
+}
+
+.post__tags:active,
+.post__tags:focus,
+.post__tags:hover {
+  color: var(--link-color);
+}
+
+.post__title {
+  margin-top: 0;
+}
+
+.post__title .post__link {
+  color: var(--text-color);
+}
+
+.post__title .post__link:active,
+.post__title .post__link:focus,
+.post__title .post__link:hover {
+  text-decoration: underline var(--text-color);
+}
+
+.post__excerpt {
+  margin-bottom: 1.21875rem;
+}

@@ -1,0 +1,31 @@
+.header {
+  width: 100vw;
+  padding: 1.5625rem 1.25rem 0;
+}
+
+@media only screen and (min-width: 685px) {
+  .header {
+    width: auto;
+    padding: 1.875rem 1.25rem;
+    grid-area: sidebar;
+    position: relative;
+  }
+
+  .header:after {
+    background: #e6e6e6;
+    background: linear-gradient(180deg, #e6e6e6 0, #e6e6e6 48%, #fff);
+    position: absolute;
+    content: "";
+    width: 0.0625rem;
+    height: 540px;
+    top: 30px;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .header {
+    padding: 2.5rem;
+  }
+}

@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Styles from './SocialIcon.module.css';
 
 const Icon = ({ icon }) => (
-  <svg className="social__svg" viewBox={icon.viewBox}>
+  <svg className={Styles.social__svg} viewBox={icon.viewBox}>
     <path d={icon.path} />
   </svg>
 );

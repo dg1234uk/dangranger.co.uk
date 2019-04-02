@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import SEO from '../components/Seo';
 import PageLayout from '../components/Layouts/page-layout';
+import Styles from './tags.module.css';
 
 const Tags = ({ data }) => (
   <PageLayout>
     <SEO title="Tags" keywords={[`Dan Granger`, `blog`, `tags`]} />
-    <main className="post-list">
-      <article className="post">
+    <main className={Styles.postList}>
+      <article className={Styles.post}>
         <h1>Tags</h1>
         {data.allMarkdownRemark.group <= 0 && (
           <h2>There are currently no tags 😭.</h2>

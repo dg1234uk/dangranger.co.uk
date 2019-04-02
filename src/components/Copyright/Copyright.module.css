@@ -1,0 +1,10 @@
+.copyright {
+  color: #b6b6b6;
+  font-size: 0.875rem;
+}
+
+.copyright__svg {
+  width: 1em; /* TODO: Should these rem? */
+  height: 1em; /* TODO: Should these rem? */
+  fill: currentColor;
+}

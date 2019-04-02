@@ -2,32 +2,33 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import SEO from '../components/Seo';
-import Icon from '../components/Icon';
+import SocialIcon from '../components/Sidebar/Social/SocialContact/SocialIcon';
 import getIcon from '../utils/get-icon';
 import PageLayout from '../components/Layouts/page-layout';
+import Styles from './contact.module.css';
 
 const ContactMe = ({ data }) => (
   <PageLayout>
     <SEO title="Contact me" />
-    <main className="post-list">
-      <article className="post">
+    <main className={Styles.postList}>
+      <article className={Styles.post}>
         <h1>Contact me</h1>
         <p>If you would like to get in contact with me please do so via:</p>
         <ul>
           <li>
-            <Icon icon={getIcon('twitter')} />{' '}
+            <SocialIcon icon={getIcon('twitter')} />{' '}
             <a href={data.site.siteMetadata.author.contacts.twitter}>
               Twitter - @dg1234uk
             </a>
           </li>
           <li>
-            <Icon icon={getIcon('github')} />{' '}
+            <SocialIcon icon={getIcon('github')} />{' '}
             <a href={data.site.siteMetadata.author.contacts.github}>
               Github - dg1234uk
             </a>
           </li>
           <li>
-            <Icon icon={getIcon('codepen')} />{' '}
+            <SocialIcon icon={getIcon('codepen')} />{' '}
             <a href={data.site.siteMetadata.author.contacts.codepen}>
               Codepen - dg1234uk
             </a>

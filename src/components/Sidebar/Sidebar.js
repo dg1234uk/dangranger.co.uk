@@ -5,12 +5,13 @@ import BlogTitle from './BlogTitle';
 import Nav from './Nav';
 import Social from './Social';
 import Copyright from '../Copyright';
+import Styles from './Sidebar.module.css';
 
 const Sidebar = ({ data }) => {
   const { title, subtitle, author, copyright, menu } = data.site.siteMetadata;
   return (
     <div>
-      <header className="header">
+      <header className={Styles.header}>
         <BlogTitle title={title} subtitle={subtitle} />
         <Nav menu={menu} />
         <Social author={author} />

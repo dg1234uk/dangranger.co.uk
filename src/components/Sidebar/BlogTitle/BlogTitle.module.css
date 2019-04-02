@@ -1,0 +1,33 @@
+.header__logo {
+  display: inline-block; /* TODO: Is this right? If removed, add margin to h1 Name below */
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-clip: padding-box;
+}
+
+.header__title {
+  font-size: 1.125rem;
+  /* font-weight: 600; */
+  line-height: 1.82813rem;
+  margin: 0.8125rem 0;
+}
+
+.header__link {
+  color: var(--text-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.header__link:active,
+.header__link:focus,
+.header__link:hover {
+  color: var(--text-color);
+}
+
+.header__intro {
+  color: var(--text-sub-color);
+  font-weight: 300;
+  line-height: 1.625rem;
+  margin-bottom: 1.625rem;
+}
