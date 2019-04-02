@@ -1,6 +1,6 @@
 /* global gaOptout */
 import React from 'react';
-import getCookie from '../utils/getCookie';
+import getCookie from '../../utils/getCookie';
 
 class CookieWarning extends React.Component {
   constructor(props) {

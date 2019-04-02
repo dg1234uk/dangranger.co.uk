@@ -1,5 +1,5 @@
 import React from 'react';
-import getIcon from '../utils/get-icon';
+import getIcon from '../../../utils/get-icon';
 
 const Copyright = () => {
   const iconSize = '1.2rem';

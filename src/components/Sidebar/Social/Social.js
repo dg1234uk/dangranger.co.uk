@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
 
-import Contact from './Contact';
+import Contact from '../Contact';
 
 const Social = ({ author }) => {
   const { contacts } = author;

@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import BlogTitle from './BlogTitle';
 import Nav from './Nav';
 import Social from './Social';
-import Copyright from './Copyright';
+import Copyright from '../Copyright';
 
 const Sidebar = ({ data }) => {
   const { title, subtitle, author, copyright, menu } = data.site.siteMetadata;

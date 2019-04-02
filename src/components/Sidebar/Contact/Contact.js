@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon from './Icon';
-import getIcon from '../utils/get-icon';
+import Icon from '../Icon';
+import getIcon from '../../../utils/get-icon';
 
 const Contact = ({ socialName, link }) => (
   <li className="social__li">
