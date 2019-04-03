@@ -12,7 +12,11 @@ const About = () => (
     <main className={Styles.postList}>
       <article className={Styles.post}>
         <h1>About me</h1>
-        <p>I am a JavaScript full-stack developer.</p>
+        <p>
+          Hello, my name is Daniel Granger. I am currently a hobbyist full-stack
+          JavaScript developer.
+        </p>
+        <p>This blog is a notebook of my projects and discoveries.</p>
       </article>
     </main>
   </PageLayout>

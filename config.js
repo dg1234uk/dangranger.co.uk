@@ -2,11 +2,11 @@ module.exports = {
   url: 'https://dangranger.co.uk',
   title: 'Dan Granger',
   subtitle:
-    'JavaScript full-stack developer. Coding since 2001. Living since 1987.',
+    'Full-stack JavaScript developer. Coding since 2001. Living since 1987.',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
-  googleAnalyticsId: '',
+  googleAnalyticsId: 'UA-136833407-1',
   menu: [
     {
       label: 'Articles',
@@ -35,8 +35,8 @@ module.exports = {
       // discord: '#',
       twitter: 'https://twitter.com/dg1234uk',
       github: 'https://github.com/dg1234uk',
-      rss: '/rss.xml',
       codepen: 'https://codepen.io/dg1234uk/',
+      rss: '/rss.xml',
     },
   },
 };

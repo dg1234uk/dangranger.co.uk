@@ -62,8 +62,8 @@ const SidebarQuery = props => (
               contacts {
                 twitter
                 github
-                rss
                 codepen
+                rss
               }
             }
           }

@@ -10,6 +10,8 @@ const Copyright = () => {
       <a
         href="https://creativecommons.org/licenses/by/4.0/"
         style={{ color: '#b6b6b6', textDecoration: 'none' }}
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <svg
           className={Styles.copyright__svg}

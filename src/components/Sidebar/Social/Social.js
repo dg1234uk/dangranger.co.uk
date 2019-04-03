@@ -22,8 +22,8 @@ Social.propTypes = {
     contacts: PropTypes.shape({
       twitter: PropTypes.string.isRequired,
       github: PropTypes.string.isRequired,
-      rss: PropTypes.string.isRequired,
       codepen: PropTypes.string.isRequired,
+      rss: PropTypes.string.isRequired,
     }).isRequired,
   }),
 };

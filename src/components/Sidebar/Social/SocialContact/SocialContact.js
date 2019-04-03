@@ -6,7 +6,13 @@ import Styles from './SocialContact.module.css';
 
 const SocialContact = ({ socialName, link }) => (
   <li className={Styles.social__li}>
-    <a href={link} aria-label={socialName} className={Styles.social__link}>
+    <a
+      href={link}
+      aria-label={socialName}
+      className={Styles.social__link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <SocialIcon icon={getIcon(socialName)} />
     </a>
   </li>
