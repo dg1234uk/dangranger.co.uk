@@ -170,7 +170,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Dan Granger | Blog`,
-        short_name: `Dan Granger | Blog`,
+        short_name: `Dan Granger`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
