@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
+import { graphql, withPrefix } from 'gatsby';
 import SEO from '../components/Seo';
 import PageLayout from '../components/Layouts/page-layout';
 import Feed from '../components/Feed';
