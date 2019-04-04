@@ -19,10 +19,15 @@ class CookieWarning extends React.Component {
     const expirationDate = new Date();
     let cookieString = '';
     expirationDate.setFullYear(expirationDate.getFullYear() + 1);
+    // console.log(expirationDate);
+    // console.log(expirationDate.toUTCString());
+
     // Build the set-cookie string:
-    cookieString = `${cookie}; path=/; expires= + ${expirationDate.toUTCString()}`;
+    cookieString = `${cookie}; path=/; expires=${expirationDate.toUTCString()}`;
+
     // Create or update the cookie:
     document.cookie = cookieString;
+    // console.log(document.cookie);
   };
 
   acceptCookies = event => {
